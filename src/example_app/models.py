@@ -6,7 +6,7 @@ from image_cropping import ImageRatioField
 class ExampleModel(models.Model):
     name = models.CharField(max_length=64)
 
-    image = models.ImageField()
+    image = models.ImageField(blank=True)
     image_cropping = ImageRatioField("image", "1x1")
 
     def __str__(self):
